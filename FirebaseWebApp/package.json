@@ -1,0 +1,15 @@
+{
+  "name": "firebasewebapp",
+  "version": "1.0.0",
+  "description": "Web App experiment on utilizing Firebase services",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Juho Jauhiainen",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^5.5.5",
+    "jquery": "^3.3.1"
+  }
+}
