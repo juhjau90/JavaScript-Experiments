@@ -1,0 +1,5 @@
+# Ignore following files from "FirebaseWebApp" directory
+
+FirebaseWebApp/node_modules
+
+FirebaseWebApp/FibaInit.js
