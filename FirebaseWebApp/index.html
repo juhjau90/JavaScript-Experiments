@@ -2,15 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-	<!-- CDN Links to required libraries. //-->
+	<!-- Below we call required libraries with CDN linking but also include an fucntion that will 
+	fetch the corresponding local package. This way our app works both on- and offline. //-->	
 	<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase-app.js"></script><!-- Always required. //-->
+	<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase-storage.js"></script>
+	  <!-- Get the local Firebase packages if CDNs fail. //-->
+	  <script>
+	    if (!window.Firebase){
+			document.write('<script src="/node_modules/firebase/firebase.js"></script>');
+			document.write('<script src="/node_modules/firebase/firebase-app.js"></script>');
+			document.write('<script src="/node_modules/firebase/firebase-storage.js"></script>');
+		} 
+	  </script>
 	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-	<!-- References to own personal JS scripts. //-->
-	<script src="index.js"></script>
+	  <!-- Get local jQuery package if CDN fails. //-->
+	  <script>
+	    if (!window.jQuery){
+			document.write('<script src="/node_modules/jquery/dist/jquery.js"></script>');
+		}
+	  </script>
+	<!-- Call external personal script file. We set it async so it runs ASAP when page loads//-->
+	<script src="index.js" async></script>
   </head>
   
   <body>
-    <!-- Calling the script that handles the Firebase initialization.//-->
+    <!-- Calling the script that handles the Firebase initialization.
+	Guides and API suggest placing it as the last part of the body. //-->
 	<script src="FibaInit.js"></script>
   </body>
 </html>
