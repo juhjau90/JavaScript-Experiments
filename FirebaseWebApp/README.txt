@@ -8,9 +8,10 @@ Reference material;
 	- Firebase API & Guides on Web implementations
 	- Various other websites
 	
-NOTE: For safety reasons, files and directories that contain references to API 
-      keys have been excluded from commits. Thus, should you wish to download and 
-	  use this solution as reference or base for your own code, you must generate 
-	  the following;
+NOTE: 
 
-			
+For safety reasons, files and directories that contain references to API keys have been excluded from commits. Thus, should you wish to 
+download and use this solution as reference or base for your own code, you must generate the following;
+
+	- Your own Web App based project on Firebase Console
+	- Use the resulting config-file in your own application solution
